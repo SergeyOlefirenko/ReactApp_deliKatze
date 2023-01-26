@@ -1,0 +1,29 @@
+{
+    "kindergarden": [
+      {
+        "id": "Munchen",
+        "list": [
+            { "name": "Maecki-loeffel"},
+            {"link": "https://www.maecki-loeffel.de/"},
+            {"location": "locationData"}
+        ] 
+      },
+      {
+        "id": "Nurnberg",
+        "list": [
+            { "name": "Maecki-loeffel"},
+            {"link": "https://www.maecki-loeffel.de/"},
+            {"location": "locationData"}
+        ]  
+      },
+      {
+        "id": "Berlin",
+        "list": [
+            { "name": "Maecki-loeffel"},
+            {"link": "https://www.maecki-loeffel.de/"},
+            {"location": "locationData"}
+        ] 
+      }
+    ]
+  }
+  
