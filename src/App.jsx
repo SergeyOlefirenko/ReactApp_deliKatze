@@ -37,7 +37,7 @@ export const AppContext = createContext();
 function App() {
  const [admin, setAdmin] = useState([])
  function fetching(){
-  axios('http://localhost:3000/admin').then(i=> setAdmin(i.data))
+  axios('https://jsonserver-bd7n.onrender.com/').then(i=> setAdmin(i.data))
  }
  useEffect(()=>{
   fetching()
