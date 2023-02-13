@@ -153,7 +153,8 @@ function wishlist() {
         </li>
         <li><a onClick={settings}>Settings</a></li>
         <li><a onClick={() => {setShowText(!showText)}}>Add to wishlist</a></li>
-        {showText === true && <Dashboard data ={data} />} 
+        {/* {showText === true && <Dashboard data ={data} />}  */}
+         {showText === true} 
         <li><a onClick={logout}>Logout</a></li>
       </ul>
     </div>

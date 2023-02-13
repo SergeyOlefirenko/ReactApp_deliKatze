@@ -8,10 +8,18 @@ import waterPic from '../images/water.png'
 import firePic from '../images/fire.png'
 import gasPic from '../images/gas.png'
 import girlPic from '../images/girl.png'
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 function Emergency() {
   const navigate = useNavigate();
   function previous() {
     navigate('/personal')
+  }
+  const style={
+    backgroundColor: 'transparent',
+    color: 'teal',
+    fontSize: '24px',
   }
   return (
     <div className='personal' style={{ backgroundImage: `url(${background})` }}>
@@ -19,19 +27,26 @@ function Emergency() {
     </div>
     <div className='personal-content'>
       <div className='p-content1'>
-        <button className='b1'><img src={emergencycallPic} alt="" /></button>
-        <button className='b2'><img src={ambulancePic} alt="" /></button>
-        <button className='b3'><img src={policePic} alt="" /></button>
+        <button className='b1' id="element" data-tooltip-content="911"><img src={emergencycallPic} alt="" /></button>
+        <button className='b2' id="element1" data-tooltip-content="Ambulance"><img src={ambulancePic} alt="" /></button>
+        <button className='b3' id="element2" data-tooltip-content="Police"><img src={policePic} alt="" /></button>
+        <ReactTooltip anchorId="element" style={style}/>
+        <ReactTooltip anchorId="element1" style={style}/>
+        <ReactTooltip anchorId="element2" style={style}/>
       </div>
       <div className='p-content2'>
-        <button className='b3'><img src={waterPic} alt="" /></button>
-        <button className='b5'><img src={firePic} alt="" /></button>
-        <button className='b6'><img src={gasPic} alt="" /></button>
+        <button className='b3' id="element3" data-tooltip-content="Water service"><img src={waterPic} alt="" /></button>
+        <button className='b5' id="element4" data-tooltip-content="Fire service"><img src={firePic} alt="" /></button>
+        <button className='b6' id="element5" data-tooltip-content="Gas service"><img src={gasPic} alt="" /></button>
+        <ReactTooltip anchorId="element3" style={style}/>
+        <ReactTooltip anchorId="element4" style={style}/>
+        <ReactTooltip anchorId="element5" style={style}/>
       </div>
       <div className='p-content4'>
-      <button onClick={previous} className="btn2">
+      <button onClick={previous} className="btn2" id="element6" data-tooltip-content="Personal page">
           <img src={girlPic} alt="" /> 
           </button>
+          <ReactTooltip anchorId="element6" style={style}/>
       </div>
     </div>
     <div><h1>This is my emergency page</h1>
